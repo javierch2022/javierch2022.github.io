@@ -1,0 +1,134 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+/* STYLE FOR HEADER*/
+body{
+    position: relative;
+    padding-bottom: 3em;
+}
+header{
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    background: linear-gradient(90deg, rgba(222,90,107,1) 0%, rgba(255,255,255,1) 50%, rgba(136,238,249,1) 100%);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.nav-list{
+    margin-top: 20px;
+    list-style-type: none;
+    display: flex;
+    gap:1rem;
+}
+.nav-list li a{
+    text-decoration: none;
+    color: #1c1c1c;
+}
+
+.nav-list li a:hover{
+    font-size:18px; ;
+    color: #eabd07;
+}
+.logo{
+    max-width: 5rem;
+}
+/*MEDIA QUERY*/
+.abrir-menu,
+.cerrar-menu{
+    display:none;
+}
+@media screen and (max-width: 550px){
+    .abrir-menu,
+    .cerrar-menu{
+        display:block;
+        border:0;
+        font-size: 1.5rem;
+        background-color: transparent;
+        cursor: pointer;
+    }
+    .nav{
+        opacity: 0;
+        visibility: hidden;
+    }
+    .abrir-menu{
+        color: #1c1c1c;
+    }
+    .cerrar-menu{
+        color:white;
+    }
+    .nav{
+        display:flex;
+        flex-direction: column;
+        align-items: end;
+        position: absolute;
+        gap:1rem;
+        top:0;
+        right:0;
+        bottom: 0;
+        background-color: #1c1c1c;
+        padding:2rem;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+    }
+    .nav.visible{
+        opacity:1;
+        visibility: visible;
+    }
+    .nav-list{
+        flex-direction:column;
+        align-items: end;
+    }
+    .nav-list li a {
+        color:white;
+    }
+    #carrusel{
+        display: none;
+    }
+    #car{
+        display:none;
+    }
+    .nav-list li a:hover{
+        font-size:18px; ;
+        color: #2dd7d7;
+    }
+    
+    #footer{
+        display:none;
+    }   
+}
+/*HERO */
+#carrusel{
+    margin-top: 20px;;
+}
+#container-card{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+#nike:hover{
+    background: linear-gradient(90deg, rgba(222,90,107,1) 0%, rgba(255,255,255,1) 50%, rgba(136,238,249,1) 100%); 
+}
+#adidas:hover{
+    background: linear-gradient(90deg, rgba(222,90,107,1) 0%, rgba(255,255,255,1) 50%, rgba(136,238,249,1) 100%);
+}
+#footer{
+    position: absolute;
+    bottom:0;
+    padding: 1.5em;
+    width: 100%;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+}
+#tienda, a{
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    color:aqua;
+}
